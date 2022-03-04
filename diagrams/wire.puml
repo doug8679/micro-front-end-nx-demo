@@ -1,0 +1,18 @@
+@startwbs
+scale 1.5
+* Root Path (named for org, i.e. tps-mfe)
+** Apps
+*** Home (shell application)
+*** NavBar
+*** Claims
+*** Remits
+*** Reports
+*** Login
+** Libs
+*** Data Access User (UserService, User interface)
+*** ClaimsClientApi (ClaimsClientService, Claim interface)
+** Tools
+*** Templates
+*** Build automations
+*** Custom generators
+@endwbs

@@ -1,0 +1,28 @@
+{
+  "root": "apps/remits-e2e",
+  "sourceRoot": "apps/remits-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/remits-e2e/cypress.json",
+        "devServerTarget": "remits:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "remits:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/remits-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["remits"]
+}

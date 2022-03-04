@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/claims/claims-api",
+  "sourceRoot": "libs/claims/claims-api/src",
+  "prefix": "tps-mfe",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/claims/claims-api"],
+      "options": {
+        "jestConfig": "libs/claims/claims-api/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/claims/claims-api/src/**/*.ts",
+          "libs/claims/claims-api/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

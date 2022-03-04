@@ -1,0 +1,28 @@
+{
+  "root": "apps/claims-e2e",
+  "sourceRoot": "apps/claims-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/claims-e2e/cypress.json",
+        "devServerTarget": "claims:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "claims:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/claims-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["claims"]
+}
